@@ -1,0 +1,30 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "standard"
+    ],
+    "ignorePatterns": [
+      "./node_modules/",
+      "./build/**/*"
+    ],
+    "rules": {
+      "brace-style": [
+        "error",
+        "stroustrup"
+      ],
+      "curly": [
+        "error",
+        "multi"
+      ],
+      "camelcase": [
+        "error",
+        {
+          "ignoreImports": true,
+          "ignoreDestructuring": true
+        }
+      ]
+    }
+  }

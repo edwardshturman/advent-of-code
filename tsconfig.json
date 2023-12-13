@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "rootDir": "./src/",
+      "outDir": "./build/",
+      "module": "ESNext",
+      "esModuleInterop": true,
+      "target": "ESNext",
+      "moduleResolution": "node",
+      "lib": ["ESNext"],
+      "allowJs": true,
+      "strict": false,
+      "sourceMap": true,
+    },
+    "include": ["./src/**/*.ts"],
+    "exclude": ["./node_modules/", "./build/"]
+  }
