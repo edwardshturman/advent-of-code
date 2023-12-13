@@ -5,12 +5,14 @@
   "version": "1.0.0",
   "license": "UNLICENSED",
   "private": true,
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/edwardshturman/advent-of-code.git"
   },
   "scripts": {
     "build": "tsc",
+    "test": "ava",
     "lint": "eslint ./src/**/*.ts"
   },
   "keywords": [
@@ -19,11 +21,21 @@
     "coding-challenges"
   ],
   "devDependencies": {
+    "@ava/typescript": "^4.1.0",
     "@types/node": "20.10.4",
     "@typescript-eslint/eslint-plugin": "6.13.2",
+    "ava": "^6.0.1",
     "eslint": "8.55.0",
     "eslint-config-standard": "17.1.0",
     "ts-node": "10.9.2",
     "typescript": "5.3.3"
+  },
+  "ava": {
+    "typescript": {
+      "rewritePaths": {
+        "src/": "build/"
+      },
+      "compile": false
+    }
   }
 }
