@@ -1,4 +1,5 @@
 import test from 'ava'
+import { input } from './input.js'
 import { concatenateNumbers, extractNumbersFromLine, isDigit, pickFirstAndLast, sum } from './1.js'
 
 test('isDigit identifies digits', t => {
@@ -32,4 +33,5 @@ test('extractNumbersFromLine extracts numbers', t => {
 test('sum sums numbers', t => {
   t.is(sum('a1bc\nab2c'), 33)
   t.is(sum('1abc2\npqr3stu8vwx\na1b2c3d4e5f\ntreb7uchet'), 142)
+  t.is(sum(input), 55090)
 })

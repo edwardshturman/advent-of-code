@@ -1,19 +1,14 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Advent of Code
+input.ts
 
 # Dependencies
 /node_modules
 
-# Production
-/build
-
 # Misc
 .DS_Store
 
-# Local env files
-.env*.local
-.env
-
 # TypeScript
+/build
 *.tsbuildinfo
 
 # VS Code
