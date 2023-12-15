@@ -1,5 +1,4 @@
 import test from 'ava'
-import { input } from './input.js'
 import {
   concatenateIntoNumber,
   isDigit,
@@ -59,10 +58,10 @@ test('sum completes the part 1 example', t => {
   t.is(sum('1abc2\npqr3stu8vwx\na1b2c3d4e5f\ntreb7uchet'), 142)
 })
 
-test('sum completes part 1 of the challenge', t => {
-  t.is(sum(input), 55090)
-})
-
 test('sum completes the part 2 example', t => {
   t.is(sum('two1nine\neightwothree\nabcone2threexyz\nxtwone3four\n4nineeightseven2\nzoneight234\n7pqrstsixteen\n'), 281)
+})
+
+test('sum completes an alternative part 2 example', t => {
+  t.is(sum('zeroabctwo\n9abczero\n123\n'), 105)
 })
