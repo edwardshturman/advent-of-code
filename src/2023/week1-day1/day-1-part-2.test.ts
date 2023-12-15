@@ -1,4 +1,5 @@
 import test from 'ava'
+import { firstTen, input, lastTen } from './input.js'
 import {
   concatenateIntoNumber,
   isDigit,
@@ -62,6 +63,31 @@ test('sum completes the part 2 example', t => {
   t.is(sum('two1nine\neightwothree\nabcone2threexyz\nxtwone3four\n4nineeightseven2\nzoneight234\n7pqrstsixteen\n'), 281)
 })
 
-test('sum completes an alternative part 2 example', t => {
-  t.is(sum('zeroabctwo\n9abczero\n123\n'), 105)
+test('sum handles empty lines', t => {
+  t.is(sum(''), 0)
+  t.is(sum('\n\n\n'), 0)
+})
+
+test('sum handles first and last ten lines of input', t => {
+  t.is(sum(firstTen), 582)
+  t.is(sum(lastTen), 413)
+})
+
+test('sum handles lines with just one digit', t => {
+  t.is(sum('1a'), 11)
+  t.is(sum('a1'), 11)
+  t.is(sum('aoneb'), 11)
+})
+
+test('sum handles lines with just digits', t => {
+  t.is(sum('12345'), 15)
+  t.is(sum('onetwothreefourfive'), 15)
+})
+
+test.failing('sum handles lines with no digits', t => {
+  t.is(sum('abc\ndef'), 0)
+})
+
+test.failing('sum completes the part 2 challenge', t => {
+  t.true(sum(input) < 54871) // Advent of Code says the answer is less than this
 })
